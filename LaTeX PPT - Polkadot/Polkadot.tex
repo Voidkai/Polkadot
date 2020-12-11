@@ -1,0 +1,89 @@
+\documentclass[UTF8]{beamer}
+\usefonttheme[onlymath]{serif}
+\setbeamertemplate{navigation symbols}{}
+\usetheme{CambridgeUS}
+%\setbeamerfont{text}{family*={ptm}, shape=\upshape, series=\mdseries}
+
+\title{An Introduction to Polkadot}
+\author{Wang Kaixuan}
+\institute[SJTU]{Shanghai Jiao Tong University}
+
+\usepackage{subfigure}
+
+\include{Commands}
+
+\begin{document}
+	\usebeamerfont{text}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Introduction}
+		\begin{block}{Polkadot}
+			Polkadot utilizes a central chain called the relay chain which communicates with multiple heterogeneous and independent sharded chains called parachains.\\
+			I
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{Substrate}
+		\begin{block}{What is Substrate?}
+			Substrate is an open source, modular, and extensible framework for building  blockchains.
+		\end{block}
+		\begin{block}{}
+			Substrate provides the core components of a blockchain: 
+			\begin{enumerate}
+				\item Database Layer
+				\item Networking Layer
+				\item Transaction Queue
+				\item Consensus Engine
+				\item Framework for Runtime Development
+			\end{enumerate}
+		Each of Which can be customized and extended
+		\end{block}
+	\end{frame}
+
+	\begin{frame}{The Substrate Runtime}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{block}{Runtime}
+				\begin{enumerate}
+					\item The runtime is the \textbf{block execution logic} of the blockchain, a.k.a the State Transition Function.
+					\item It is composed of FRAME Pallets
+				\end{enumerate}
+			\end{block}
+			\bigskip
+			\bigskip
+			\bigskip
+			\bigskip
+			\column{0.5\textwidth}
+			\begin{figure}
+				\centering
+				\includegraphics[width=6cm]{figure/Runtime}
+				\centering
+				\includegraphics[width=6cm]{figure/Runtime2}
+				\caption{Runtime and Frame}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}{Building Blocks of Substrate}
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{"figure/Building Blocks of substrate"}
+			\caption{}
+			\label{fig:building-blocks-of-substrate}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}{Why WebAssembly}
+		\begin{block}{}
+		Wasm is a platform independent executable format
+		\begin{itemize}
+			\item Wasm is Sandboxed
+			\item Wasm is Fast
+			\item Wasm is Compact
+			\item Wasm is Well Supported
+		\end{itemize}
+	\end{block}
+	\end{frame}
+\end{document} 
